@@ -74,61 +74,6 @@
                     >
                   </div>
                 </div>
-                <!-- <div class="card border-0" style="width: 100%">
-                  <div
-                    class="img_card"
-                    style="
-                      height: 300px;
-                      background-color: black;
-                      border-radius: 36px;
-                    "
-                  >
-                    <img
-                      :src="article.image"
-                      class="card-img-top"
-                      alt="img"
-                      style="
-                        height: 100%;
-                        border-radius: 36px;
-                        object-fit: cover;
-                      "
-                    />
-                  </div>
-                  <div
-                    class="card-body text-center shadow"
-                    style="
-                      position: relative;
-                      bottom: 65px;
-                      background-color: white;
-                      border-radius: 36px;
-                      height: 227px;
-                    "
-                  >
-                    <p class="card-text text-orange">
-                      {{ article.date }}
-                      <FontAwesome icon="clock" class="ms-2" />
-                      13/11-2023
-                    </p>
-                    <h5 class="card-title text-black">{{ article.title }}</h5>
-                    <p class="text-black">
-                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
-                      توليد هذا النص من
-                    </p>
-                    <router-link
-                      class="m-2 border-0"
-                      :to="{ name: 'article', params: { id: article.id } }"
-                      exact
-                    >
-                      <span
-                        style="background-color: #0c4da2"
-                        class="btn fw-bold text-light rounded-pill border-2 py-3 px-4"
-                      >
-                        <FontAwesome icon="circle-arrow-left" class="ms-2" />
-                        شاهد المزيد</span
-                      >
-                    </router-link>
-                  </div>
-                </div> -->
               </router-link>
             </div>
           </div>
@@ -202,7 +147,6 @@ export default {
         .catch(() => this.$router.push({ path: "/servererror" }));
       if (result.status == 200) {
         this.articles = result.data.data;
-        console.log(this.articles);
         this.makePagination(result.data.meta);
       }
       this.loading = false;
@@ -218,6 +162,13 @@ export default {
 };
 </script>
 <style scoped>
+.active > .page-link,
+.page-link.active {
+  z-index: 3;
+  color: var(--bs-pagination-active-color);
+  background-color: #393e46;
+  border-color: #393e46;
+}
 .articles {
   direction: rtl;
   color: #1f1e1e;

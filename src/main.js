@@ -17,12 +17,12 @@ import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 import VueSnip from "vue-snip";
 /* lightbox */
-import "viewerjs/dist/viewer.css";
-import VueViewer from "v-viewer";
+// import "viewerjs/dist/viewer.css";
+// import VueViewer from "v-viewer";
 library.add(fas, far, fab);
 createApp(App)
   .use(store)
-  .use(VueViewer)
+  // .use(VueViewer)
   .use(VueSweetalert2)
   .use(VueSnip)
   .component("FontAwesome", FontAwesomeIcon)

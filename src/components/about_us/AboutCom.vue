@@ -63,7 +63,6 @@
 <script>
 import PageLoader from "@/components/pageloader/PageLoder.vue";
 
-import axios from "axios";
 import NavBarCom from "@/components/navbar/NavBar.vue";
 import FooterCom from "@/components/footer/FooterCom.vue";
 export default {
@@ -76,45 +75,8 @@ export default {
   data() {
     return {
       loading: false,
-
-      // اخر الاخبار
-      articles: [],
-      pagination: {},
     };
-  },
-  async mounted() {
-    this.fetcharticles();
-  },
-  methods: {
-    async fetcharticles(page_url) {
-      page_url = page_url || `https://admin.growth-tech.co/api/articles`;
-      this.loading = true;
-      let result = await axios
-        .get(page_url)
-        .catch(() => this.$router.push({ path: "/servererror" }));
-      if (result.status == 200) {
-        this.articles = result.data.data;
-        console.log(this.articles);
-        this.makePagination(result.data.meta);
-      }
-      this.loading = false;
-    },
-
-    async makePagination(meta) {
-      let pagination = {
-        links: meta.links,
-      };
-      this.pagination = pagination;
-    },
   },
 };
 </script>
-<style>
-.articles {
-  direction: rtl;
-  color: #1f1e1e;
-}
-.shadow {
-  box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-}
-</style>
+<style></style>

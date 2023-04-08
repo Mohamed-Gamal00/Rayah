@@ -12,7 +12,6 @@
           />
         </router-link>
         <span
-          style="background-color: #ffd369; color: white"
           class="navbar-toggler p-2"
           type="button"
           data-bs-toggle="collapse"
@@ -48,7 +47,7 @@
               ><span class="fw-bold">المدونة</span></router-link
             >
           </div>
-          <router-link class="m-2 border-0" :to="{ name: 'ordernow' }" exact>
+          <router-link class="m-2 border-0" :to="{ name: 'contact' }" exact>
             <span
               style="
                 background-color: #ffd369;
@@ -96,10 +95,9 @@ export default {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
   font-size: var(--bs-navbar-toggler-font-size);
   line-height: 1;
-  color: rgb(203 21 21 / 55%);
+  color: rgba(0, 0, 0, 0.55);
   background-color: transparent;
-  border: var(--bs-border-width) solid var(--bs-navbar-toggler-border-color);
-  border-radius: var(--bs-navbar-toggler-border-radius);
-  transition: var(--bs-navbar-toggler-transition);
+  background-color: #08080800;
+  border: none !important;
 }
 </style>

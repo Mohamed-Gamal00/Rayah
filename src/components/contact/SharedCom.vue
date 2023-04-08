@@ -14,8 +14,8 @@
               <div class="card text-black border-0">
                 <div class="card-body p-0" style="direction: ltr">
                   <div
-                    class="row justify-content-center py-5"
-                    style="background-color: #393e46"
+                    class="row justify-content-center py-5 bg-img"
+                    style="background-color: #393e46; border-radius: 24px"
                   >
                     <div class="col-md-10 col-lg-6 col-xl-6 order-2 order-lg-1">
                       <form
@@ -239,6 +239,27 @@ export default {
 </script>
 
 <style scoped>
+.bg-img::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.08;
+  background-image: url("../../../public/assets/rayah/logo3.png");
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: contain;
+  transition: all 2s ease-in-out;
+}
+.bg-img:focus::before {
+  z-index: -2; /* Apply a lower z-index on hover */
+}
+.bg-img:hover::before {
+  z-index: -2; /* Apply a lower z-index on hover */
+}
 .form-control {
   border: none;
   border-radius: 5px !important;
