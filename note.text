@@ -1,0 +1,8 @@
+<FontAwesome icon="user" />solid
+<FontAwesome :icon="['far', 'user']" />  regular
+<FontAwesome :icon="['fab', 'facebook']" />  brands
+
+articles
+            <router-link class="m-2" :to="{ name: 'home' }" exact
+              ><a class="fw-bold" href="#home">الرئيسة</a></router-link
+            >

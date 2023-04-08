@@ -1,0 +1,120 @@
+<template>
+  <NavBarCom />
+  <div class="container-fluid">
+    <div
+      class="row d-flex justify-content-center text-center my-4 py-5"
+      style="background-color: #393e46"
+    >
+      <p class="fs-20 fw-bold text-white">من نحن</p>
+      <h3 class="fs-18 text-white" style="font-weight: 500">
+        تعرف علي ما نقدمة بمزيد من التفاصيل التوضيحية
+      </h3>
+    </div>
+  </div>
+  <div class="articles">
+    <div v-if="loading">
+      <div>
+        <PageLoader />
+      </div>
+    </div>
+    <div
+      data-aos="fade-up"
+      data-aos-easing="ease-out-cubic"
+      data-aos-duration="1500"
+      class="container-fluid mt-lg-5 pt-lg-5"
+    >
+      <div class="container">
+        <div class="row d-flex justify-content-center">
+          <div class="col-md-10">
+            <div class="row align-items-center justify-content-between mb-2">
+              <div class="col-lg-6 text-center mt-sm-4">
+                <img
+                  class="img-fluid rounded-3"
+                  src="../../../public/assets/rayah/about.png"
+                  width="388"
+                  height="317"
+                  alt="img"
+                />
+              </div>
+              <div
+                class="col-lg-5 fw-bold align-middle text-center text-lg-end"
+              >
+                <p class="pb-3 font_p_home fs-14" style="color: #1f1e1e">
+                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
+                  توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
+                  النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
+                  التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح
+                  لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو
+                  مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي
+                  المواقع على وجه
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- تثبيت الفوتر لتحت -->
+  <div style="position: relative; bottom: -55px; right: 0; left: 0">
+    <FooterCom />
+  </div>
+</template>
+<script>
+import PageLoader from "@/components/pageloader/PageLoder.vue";
+
+import axios from "axios";
+import NavBarCom from "@/components/navbar/NavBar.vue";
+import FooterCom from "@/components/footer/FooterCom.vue";
+export default {
+  name: "ArticlesCom",
+  components: {
+    PageLoader,
+    NavBarCom,
+    FooterCom,
+  },
+  data() {
+    return {
+      loading: false,
+
+      // اخر الاخبار
+      articles: [],
+      pagination: {},
+    };
+  },
+  async mounted() {
+    this.fetcharticles();
+  },
+  methods: {
+    async fetcharticles(page_url) {
+      page_url = page_url || `https://admin.growth-tech.co/api/articles`;
+      this.loading = true;
+      let result = await axios
+        .get(page_url)
+        .catch(() => this.$router.push({ path: "/servererror" }));
+      if (result.status == 200) {
+        this.articles = result.data.data;
+        console.log(this.articles);
+        this.makePagination(result.data.meta);
+      }
+      this.loading = false;
+    },
+
+    async makePagination(meta) {
+      let pagination = {
+        links: meta.links,
+      };
+      this.pagination = pagination;
+    },
+  },
+};
+</script>
+<style>
+.articles {
+  direction: rtl;
+  color: #1f1e1e;
+}
+.shadow {
+  box-shadow: 0 -0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+</style>
