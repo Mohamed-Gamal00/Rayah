@@ -74,30 +74,31 @@ export default {
     return {
       loading: false,
       article: [],
-      articles: [],
+      // articles: [],
       id: this.$route.params.id,
     };
   },
   async mounted() {
     this.loading = true;
     let result = await axios
-      .get(`https://admin.growth-tech.co/api/article/${this.id}`)
+      .get(`https://admin.rayyah.net/api/article/${this.id}`)
       .catch(() => this.$router.push({ name: "servererror" }));
     if (result.status == 200) {
       this.article = result.data.article;
     }
     /* articles */
-    let articles = await axios.get(`https://admin.growth-tech.co/api/articles`);
-    // .catch(() => this.$router.push({ name: "servererror" }));
-    if (result.status == 200) {
-      this.articles = articles.data.data.splice(0, 3);
-    }
+    // let articles = await axios
+    //   .get(`https://admin.rayyah.net/api/articles`)
+    //   .catch(() => this.$router.push({ name: "servererror" }));
+    // if (result.status == 200) {
+    //   this.articles = articles.data.data.slice(0, 3);
+    // }
     this.loading = false;
   },
 };
 </script>
 
-<style>
+<style scoped>
 .header {
   width: 100%;
 }

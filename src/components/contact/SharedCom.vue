@@ -96,7 +96,7 @@
                                   type="text"
                                   placeholder="اترك رسالتك"
                                   class="form-control"
-                                  v-model="contact.name"
+                                  v-model="contact.message"
                                 />
                                 <span
                                   class="erroe-feedbak"
@@ -170,9 +170,8 @@ export default {
       v$: useValidate(),
       contact: {
         name: "",
-        number: "",
         email: "",
-        subject: "",
+        number: "",
         message: "",
       },
     };
@@ -181,9 +180,8 @@ export default {
     return {
       contact: {
         name: { required },
-        number: { required },
         email: { required, email },
-        subject: { required },
+        number: { required },
         message: { required },
       },
     };
@@ -198,7 +196,7 @@ export default {
       this.v$.$validate();
       if (!this.v$.$error) {
         let result = await axios.post(
-          `https://admin.growth-tech.co/api/contact`,
+          `https://admin.rayyah.net/api/contact`,
           this.contact
         );
         if (result.status == 200) {
@@ -214,16 +212,15 @@ export default {
             this.contact.name = "";
             this.contact.number = "";
             this.contact.email = "";
-            this.contact.subject = "";
             this.contact.message = "";
             (this.v$.contact.name.$errors[0].$message = ""),
               (this.v$.contact.number.$errors[0].$message = ""),
               (this.v$.contact.email.$errors[0].$message = ""),
-              (this.v$.contact.subject.$errors[0].$message = ""),
               (this.v$.contact.message.$errors[0].$message = "");
           }, 2000);
         }
       } else {
+        console.log(this.result);
         this.$swal.fire({
           icon: "error",
           title: "Oops...",
@@ -248,7 +245,7 @@ export default {
   width: 100%;
   height: 100%;
   opacity: 0.08;
-  background-image: url("../../../public/assets/rayah/logo3.png");
+  background-image: url("../../../public/assets/rayah/logo3.webp");
   background-repeat: no-repeat;
   background-position: 100% 0;
   background-size: contain;

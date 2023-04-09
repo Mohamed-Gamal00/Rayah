@@ -30,7 +30,7 @@
               <div class="col-lg-6 text-center mt-sm-4">
                 <img
                   class="img-fluid rounded-3"
-                  src="../../../public/assets/rayah/about.png"
+                  src="../../../public/assets/rayah/about.webp"
                   width="388"
                   height="317"
                   alt="img"

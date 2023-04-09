@@ -5,13 +5,13 @@
       <div class="container">
         <router-link class="navbar-brand" :to="{ name: 'home' }">
           <img
-            src="../../../public/assets/rayah/logo.jpg"
-            width="60"
-            height="60"
+            src="../../../public/assets/rayah/logo2.webp"
+            width="50"
+            height="50"
             alt="img"
           />
         </router-link>
-        <span
+        <button
           class="navbar-toggler p-2"
           type="button"
           data-bs-toggle="collapse"
@@ -19,10 +19,23 @@
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          role="button"
         >
-          <!-- <span class="p-2"><FontAwesome icon="caret-down" /></span> -->
           <span class="navbar-toggler-icon"></span>
-        </span>
+        </button>
+
+        <!-- <span
+          class="navbar-toggler p-2"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          role="button"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </span> -->
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <div class="navbar-nav nav mx-auto mb-2 mb-lg-0 p-0">
             <router-link
@@ -74,7 +87,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .style {
   direction: rtl;
 }
@@ -99,5 +112,10 @@ export default {
   background-color: transparent;
   background-color: #08080800;
   border: none !important;
+}
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 !important;
 }
 </style>

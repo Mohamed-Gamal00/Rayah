@@ -15,9 +15,10 @@
                   <div class="col-md-6 col-lg-4 text-center p-0">
                     <span class="">
                       <img
-                        src="../../../public/assets/rayah/logo.jpg"
+                        src="../../../public/assets/rayah/logo2.webp"
                         style="position: relative; bottom: 30px"
                         width="50"
+                        height="50"
                         alt="img"
                       />
                     </span>
@@ -58,9 +59,9 @@
                   </div>
                   <!-- الشركة -->
                   <div class="col-md-6 col-lg-4">
-                    <h5 class="text-black text-center mb-4 fw-bold">
+                    <h3 class="text-black text-center fs-20 mb-4 fw-bold">
                       اقسام الموقع
-                    </h5>
+                    </h3>
                     <router-link
                       class="btn_btn_link text-decoration-none fw-bold"
                       :to="{ name: 'home' }"
@@ -84,9 +85,11 @@
                   </div>
                   <!-- العمل -->
                   <div class="col-md-6 col-lg-4 fw-bold">
-                    <h5 class="text-black text-center text-lg-end fw-bold mb-4">
+                    <h3
+                      class="text-black text-center fs-20 text-lg-end fw-bold mb-4"
+                    >
                       تواصل معنا
-                    </h5>
+                    </h3>
                     <div>
                       <div
                         class="card border-0 text-center text-lg-end"
@@ -137,7 +140,7 @@
                 <div class="row border-top">
                   <div class="col-md-12 text-black text-center my-3">
                     جميع الحقوق محفوظة لموقع ريح&copy;
-                    <a class="text-decoration-none text-black">2023</a>
+                    <span class="text-black">2023</span>
                   </div>
                 </div>
               </div>
