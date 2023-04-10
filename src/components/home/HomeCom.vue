@@ -1,5 +1,10 @@
 <template>
   <NavBarCom />
+  <div class="whatsapp-btn" @click="openWhatsApp">
+    <a href="#">
+      <img src="../../../public/assets/rayah/whatsapp.png" alt="WhatsApp" />
+    </a>
+  </div>
   <div v-if="loading">
     <div>
       <PageLoader />
@@ -173,7 +178,7 @@
                         :icon="['far', 'clock']"
                         class="ps-2 text-yellow"
                       />
-                      <span class="text-muted"> 4/5/2023 </span>
+                      <span class="text-muted"> {{ article.date }} </span>
                     </span>
                     <h3 class="mt-0 fw-bold">{{ article.title }}</h3>
                     <p
@@ -240,14 +245,36 @@ export default {
       })
       .catch((err) => {
         console.log(err);
+        this.$router.push({ name: "servererror" });
       });
 
     this.loading = false;
+  },
+  methods: {
+    openWhatsApp() {
+      const url = `https://wa.me/+0201065743052`;
+      window.open(url, "_blank");
+    },
   },
 };
 </script>
 
 <style scoped>
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.whatsapp-btn a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-image: url("../../../public/assets/rayah/whatsapp.png");
+  background-size: cover;
+  text-indent: -9999px;
+}
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

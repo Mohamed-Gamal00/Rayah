@@ -46,7 +46,7 @@
                       :icon="['far', 'clock']"
                       class="ps-2 text-yellow"
                     />
-                    <span class="text-muted"> 4/5/2023 </span>
+                    <span class="text-muted"> {{ article.date }}</span>
                   </span>
                   <h5 class="mt-0 fw-bold">{{ article.title }}</h5>
                   <p
