@@ -10,6 +10,7 @@
             height="50"
             alt="img"
           />
+          <p class="fs-10">تطبيق ريح للتوصيل</p>
         </router-link>
         <button
           class="navbar-toggler p-2"

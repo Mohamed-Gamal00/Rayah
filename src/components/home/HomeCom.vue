@@ -1,10 +1,10 @@
 <template>
   <NavBarCom />
-  <div class="whatsapp-btn" @click="openWhatsApp">
+  <!-- <div class="whatsapp-btn" @click="openWhatsApp">
     <a href="#">
       <img src="../../../public/assets/rayah/whatsapp.png" alt="WhatsApp" />
     </a>
-  </div>
+  </div> -->
   <div v-if="loading">
     <div>
       <PageLoader />
@@ -250,17 +250,17 @@ export default {
 
     this.loading = false;
   },
-  methods: {
-    openWhatsApp() {
-      const url = `https://wa.me/+0201065743052`;
-      window.open(url, "_blank");
-    },
-  },
+  // methods: {
+  //   openWhatsApp() {
+  //     const url = `https://wa.me/+0201065743052`;
+  //     window.open(url, "_blank");
+  //   },
+  // },
 };
 </script>
 
 <style scoped>
-.whatsapp-btn {
+/* .whatsapp-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -274,7 +274,7 @@ export default {
   background-image: url("../../../public/assets/rayah/whatsapp.png");
   background-size: cover;
   text-indent: -9999px;
-}
+} */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

@@ -31,29 +31,36 @@
                         class="btnn btn-outline-light btn-social"
                         target="_blank"
                         aria-label="facebook"
-                        href="#"
+                        href="https://www.facebook.com/Rayah-108277785566354/?ref=page_internal"
                         ><FontAwesome :icon="['fab', 'facebook']"
                       /></a>
                       <a
                         class="btnn btn-outline-light btn-social"
                         target="_blank"
                         aria-label="Twitter"
-                        href="#"
+                        href="https://twitter.com/rrayah98"
                         ><FontAwesome :icon="['fab', 'twitter']"
                       /></a>
                       <a
                         class="btnn btn-outline-light btn-social"
                         target="_blank"
                         aria-label="instagram"
-                        href="#"
-                        ><FontAwesome :icon="['fab', 'snapchat']"
+                        href="https://z-p15.www.instagram.com/rrayah98/"
+                        ><FontAwesome :icon="['fab', 'instagram']"
                       /></a>
                       <a
                         class="btnn btn-outline-light btn-social"
                         target="_blank"
-                        aria-label="linkedin"
-                        href="#"
-                        ><FontAwesome :icon="['fab', 'youtube']"
+                        aria-label="tiktok"
+                        href="https://www.tiktok.com/@rayahrayah4?lang=ar"
+                        ><FontAwesome :icon="['fab', 'tiktok']"
+                      /></a>
+                      <a
+                        class="btnn btn-outline-light btn-social"
+                        target="_blank"
+                        aria-label="tilinkedinktok"
+                        href="https://www.linkedin.com/in/rayah-rayah-154b33270/"
+                        ><FontAwesome :icon="['fab', 'linkedin']"
                       /></a>
                     </div>
                   </div>
