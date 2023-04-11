@@ -17,12 +17,7 @@
         <PageLoader />
       </div>
     </div>
-    <div
-      data-aos="fade-up"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="1500"
-      class="container-fluid mt-lg-5 pt-lg-5"
-    >
+    <div class="container-fluid mt-lg-5 pt-lg-5">
       <div class="container">
         <div class="row d-flex justify-content-center">
           <div class="col-md-10">

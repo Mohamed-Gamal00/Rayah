@@ -72,9 +72,6 @@
     </div>
     <!-- about us 2 -->
     <div
-      data-aos="fade-up"
-      data-aos-easing="ease-out-cubic"
-      data-aos-duration="1500"
       class="container-fluid mt-lg-5 pt-lg-5"
       style="background-color: #f8faff"
     >
@@ -239,12 +236,10 @@ export default {
     await axios
       .get(`https://admin.rayyah.net/api/articles`)
       .then((response) => {
-        console.log(response);
         this.articles = response.data.articles;
-        console.log(this.articles);
       })
-      .catch((err) => {
-        console.log(err);
+      .catch(() => {
+        // console.log(err);
         this.$router.push({ name: "servererror" });
       });
 

@@ -109,12 +109,10 @@ export default {
       await axios
         .get(`https://admin.rayyah.net/api/articles`)
         .then((response) => {
-          console.log(response);
           this.articles = response.data.articles;
-          console.log(this.articles);
         })
-        .catch((err) => {
-          console.log(err);
+        .catch(() => {
+          // console.log(err);
         });
       this.loading = false;
     },

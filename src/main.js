@@ -1,6 +1,5 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import router from "./router";
 import store from "./store";
 import "./css/style.css";
 import "./css/style.scss";
@@ -16,15 +15,16 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import VueSweetalert2 from "vue-sweetalert2";
 import "sweetalert2/dist/sweetalert2.min.css";
 import VueSnip from "vue-snip";
-/* lightbox */
-// import "viewerjs/dist/viewer.css";
-// import VueViewer from "v-viewer";
 library.add(fas, far, fab);
-createApp(App)
-  .use(store)
-  // .use(VueViewer)
-  .use(VueSweetalert2)
-  .use(VueSnip)
-  .component("FontAwesome", FontAwesomeIcon)
-  .use(router)
-  .mount("#app");
+
+const app = createApp(App);
+
+// Use dynamic import to split router code into separate chunk
+import("./router").then((module) => {
+  app.use(module.default);
+  app.use(store);
+  app.use(VueSweetalert2);
+  app.use(VueSnip);
+  app.component("FontAwesome", FontAwesomeIcon);
+  app.mount("#app");
+});

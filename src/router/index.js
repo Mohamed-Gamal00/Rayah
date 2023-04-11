@@ -1,67 +1,52 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "../views/HomeView.vue";
-import ArticlesView from "../views/ArticlesView.vue";
-import ArticlepostView from "../views/ArticlepostView.vue";
-import ContactUsView from "../views/ContactUsView.vue";
-import ProductsView from "../views/ProductsView.vue";
-import ServicesView from "../views/ServicesView.vue";
-import ErrorView from "../views/ErrorView.vue";
-import ServerError from "../views/ServerError.vue";
-import OrderNow from "../components/products/OrderNow.vue";
 const routes = [
   {
     path: "/",
     name: "home",
-    component: HomeView,
+    component: () =>
+      import(/* webpackChunkName: "home" */ "../views/HomeView.vue"),
   },
   {
     path: "/about",
     name: "about",
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/AboutView.vue"),
   },
   {
     path: "/articles",
     name: "articles",
-    component: ArticlesView,
+    component: () =>
+      import(/* webpackChunkName: "articles" */ "../views/ArticlesView.vue"),
   },
   {
     path: "/article/:id",
     name: "article",
-    component: ArticlepostView,
+    component: () =>
+      import(/* webpackChunkName: "article" */ "../views/ArticlepostView.vue"),
   },
   {
     path: "/contact-us",
     name: "contact",
-    component: ContactUsView,
+    component: () =>
+      import(/* webpackChunkName: "contact" */ "../views/ArticlepostView.vue"),
   },
   {
-    path: "/products",
-    name: "products",
-    component: ProductsView,
-  },
-  {
-    path: "/ordernow",
-    name: "ordernow",
-    component: OrderNow,
-  },
-  {
-    path: "/services",
-    name: "services",
-    component: ServicesView,
+    path: "/contact-us",
+    name: "contact",
+    component: () =>
+      import(/* webpackChunkName: "contact" */ "../views/ContactUsView.vue"),
   },
   {
     path: "/servererror",
     name: "servererror",
-    component: ServerError,
+    component: () =>
+      import(/* webpackChunkName: "servererror" */ "../views/ErrorView.vue"),
   },
   {
     path: "/:catchAll(.*)*",
     name: "errorpage",
-    component: ErrorView,
+    component: () =>
+      import(/* webpackChunkName: "errorpage" */ "../views/ErrorView.vue"),
   },
 ];
 
