@@ -134,13 +134,13 @@
                         style="width: 100%"
                       >
                         <div class="card-body" style="padding: 0px 15px">
-                          <h5
-                            class="card-title lh-lg"
+                          <p
+                            class="card-title lh-lg fs-20"
                             style="font-weight: 900 !important; font: 20px"
                           >
                             بسهولة الآن يمكنك ارسال طلبك وسيتم
                             <span class="text-yellow">التواصل معك</span>
-                          </h5>
+                          </p>
                           <p class="card-text mt-5" style="color: #d7d8da">
                             أرسل طلبك وسيتم الرد عليك بأقصى سرعة ممكنة
                           </p>
@@ -252,10 +252,10 @@ export default {
   transition: all 2s ease-in-out;
 }
 .bg-img:focus::before {
-  z-index: -2; /* Apply a lower z-index on hover */
+  z-index: -2;
 }
 .bg-img:hover::before {
-  z-index: -2; /* Apply a lower z-index on hover */
+  z-index: -2;
 }
 .form-control {
   border: none;

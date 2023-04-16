@@ -40,7 +40,7 @@ const routes = [
     path: "/servererror",
     name: "servererror",
     component: () =>
-      import(/* webpackChunkName: "servererror" */ "../views/ErrorView.vue"),
+      import(/* webpackChunkName: "servererror" */ "../views/ServerError.vue"),
   },
   {
     path: "/:catchAll(.*)*",

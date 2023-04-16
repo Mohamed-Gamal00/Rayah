@@ -16,53 +16,18 @@
                     <span class="">
                       <img
                         src="../../../public/assets/rayah/logo2.webp"
-                        style="position: relative; bottom: 30px"
+                        style="position: relative; bottom: 7px"
                         width="50"
                         height="50"
                         alt="img"
                       />
+                      <p class="fs-10 text-black">تطبيق ريح للتوصيل</p>
                     </span>
                     <p class="text-black">
-                      هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
-                      توليد هذا النص من مولد النص العربى، حيث يمكنك
+                      تطبيق ريح، يقدم خدمات توصيل الطلبات بمكة بطريقة سهلة
+                      وفعالة. إذا كنت تريد شيئًا ما، فسوف يقوم فريقنا بتوصيله لك
+                      في أسرع وقت ممكن
                     </p>
-                    <div class="d-flex justify-content-center pt-2">
-                      <a
-                        class="btnn btn-outline-light btn-social"
-                        target="_blank"
-                        aria-label="facebook"
-                        href="https://www.facebook.com/Rayah-108277785566354/?ref=page_internal"
-                        ><FontAwesome :icon="['fab', 'facebook']"
-                      /></a>
-                      <a
-                        class="btnn btn-outline-light btn-social"
-                        target="_blank"
-                        aria-label="Twitter"
-                        href="https://twitter.com/rrayah98"
-                        ><FontAwesome :icon="['fab', 'twitter']"
-                      /></a>
-                      <a
-                        class="btnn btn-outline-light btn-social"
-                        target="_blank"
-                        aria-label="instagram"
-                        href="https://z-p15.www.instagram.com/rrayah98/"
-                        ><FontAwesome :icon="['fab', 'instagram']"
-                      /></a>
-                      <a
-                        class="btnn btn-outline-light btn-social"
-                        target="_blank"
-                        aria-label="tiktok"
-                        href="https://www.tiktok.com/@rayahrayah4?lang=ar"
-                        ><FontAwesome :icon="['fab', 'tiktok']"
-                      /></a>
-                      <a
-                        class="btnn btn-outline-light btn-social"
-                        target="_blank"
-                        aria-label="tilinkedinktok"
-                        href="https://www.linkedin.com/in/rayah-rayah-154b33270/"
-                        ><FontAwesome :icon="['fab', 'linkedin']"
-                      /></a>
-                    </div>
                   </div>
                   <!-- الشركة -->
                   <div class="col-md-6 col-lg-4">
@@ -84,11 +49,35 @@
                       :to="{ name: 'articles' }"
                       >المدونة</router-link
                     >
-                    <router-link
+                    <!-- <router-link
                       class="btn_btn_link text-decoration-none my-3 fw-bold"
                       :to="{ name: 'contact' }"
                       >تواصل معنا</router-link
-                    >
+                    > -->
+                    <p class="text-black text-center mb-1 fs-14 fw-bold">
+                      حمل التطبيق الآن
+                    </p>
+                    <div class="text-center text-lg-end">
+                      <!-- Google Play button -->
+                      <a class="market-btn google-btn" href="#" role="button">
+                        <span class="market-button-subtitle fs-10"
+                          >GET IT ON</span
+                        >
+                        <span class="market-button-title">Google Play</span>
+                      </a>
+                      <!-- App Store button -->
+                      <a
+                        class="market-btn apple-btn"
+                        href="#"
+                        role="button"
+                        style="width: 160.72px"
+                      >
+                        <span class="market-button-subtitle fs-10"
+                          >Download on the</span
+                        >
+                        <span class="market-button-title">App Store</span>
+                      </a>
+                    </div>
                   </div>
                   <!-- العمل -->
                   <div class="col-md-6 col-lg-4 fw-bold">
@@ -103,40 +92,58 @@
                         style="width: 100%"
                       >
                         <div class="card-body text-black">
-                          <h5 class="card-title fs-16 fw-bold">
+                          <span class="card-title fs-16 fw-bold">
                             <FontAwesome
                               class="ms-2 bg-orange"
                               :icon="['far', 'envelope']"
                             />البريد الالكتروني
-                          </h5>
-                          <p class="card-text fs-14 p-0">Rayah@gmail.com</p>
-                          <h5 class="card-title fs-16 fw-bold">
+                          </span>
+                          <p class="card-text fs-14 p-0">rayah98@gmail.com</p>
+                          <span class="card-title fs-16 fw-bold">
                             <FontAwesome class="ms-2 bg-orange" icon="phone" />
                             رقم الجوال
-                          </h5>
-                          <p class="card-text fs-14">1154654500000</p>
+                          </span>
+                          <p class="card-text fs-14">+966555155496</p>
                         </div>
                       </div>
-                      <div class="my-2 text-center text-lg-end">
-                        <!-- Google Play button -->
-                        <a class="market-btn google-btn" href="#" role="button">
-                          <span class="market-button-subtitle fs-10"
-                            >GET IT ON</span
-                          >
-                          <span class="market-button-title">Google Play</span>
-                        </a>
-                        <!-- App Store button -->
+                      <div
+                        class="d-flex justify-content-center justify-content-lg-start pt-2"
+                      >
                         <a
-                          class="market-btn apple-btn"
-                          href="#"
-                          role="button"
-                          style="width: 160.72px"
-                        >
-                          <span class="market-button-subtitle fs-10"
-                            >Download on the</span
-                          >
-                          <span class="market-button-title">App Store</span>
-                        </a>
+                          class="btnn btn-outline-light btn-social"
+                          target="_blank"
+                          aria-label="facebook"
+                          href="https://www.facebook.com/Rayah-108277785566354/?ref=page_internal"
+                          ><FontAwesome :icon="['fab', 'facebook']"
+                        /></a>
+                        <a
+                          class="btnn btn-outline-light btn-social"
+                          target="_blank"
+                          aria-label="Twitter"
+                          href="https://twitter.com/rrayah98"
+                          ><FontAwesome :icon="['fab', 'twitter']"
+                        /></a>
+                        <a
+                          class="btnn btn-outline-light btn-social"
+                          target="_blank"
+                          aria-label="instagram"
+                          href="https://z-p15.www.instagram.com/rrayah98/"
+                          ><FontAwesome :icon="['fab', 'instagram']"
+                        /></a>
+                        <a
+                          class="btnn btn-outline-light btn-social"
+                          target="_blank"
+                          aria-label="tiktok"
+                          href="https://www.tiktok.com/@rayahrayah4?lang=ar"
+                          ><FontAwesome :icon="['fab', 'tiktok']"
+                        /></a>
+                        <a
+                          class="btnn btn-outline-light btn-social"
+                          target="_blank"
+                          aria-label="tilinkedinktok"
+                          href="https://www.linkedin.com/in/rayah-rayah-154b33270/"
+                          ><FontAwesome :icon="['fab', 'linkedin']"
+                        /></a>
                       </div>
                     </div>
                   </div>

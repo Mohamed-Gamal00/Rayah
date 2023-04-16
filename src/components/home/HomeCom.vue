@@ -5,11 +5,11 @@
       <img src="../../../public/assets/rayah/whatsapp.png" alt="WhatsApp" />
     </a>
   </div> -->
-  <div v-if="loading">
+  <!-- <div v-if="loading">
     <div>
       <PageLoader />
     </div>
-  </div>
+  </div> -->
   <div class="home mt-4" style="direction: rtl" id="home">
     <!-- text and image -->
     <div class="container">
@@ -18,15 +18,14 @@
           <div class="row align-items-center justify-content-between mb-2">
             <div class="col-lg-5 fw-bold align-middle text-center text-lg-end">
               <h1 class="mb-4 fw-bold" style="font-weight: 900 !important">
-                ريح
+                ريح لتوصيل الطلبات بمكة
               </h1>
-              <p class="pb-3 font_p_home" style="color: #1f1e1e">
-                حمل تطبيق ريح
-              </p>
-              <p>
-                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد
-                هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا النص أو
-                العديد من
+              <p class="fs-14">
+                ريح تطبيق توصيل الطلبات يهدف لتوفير خدمة توصيل الطلبات إلى
+                العملاء بمكة بكل سهولة ويسر، يتيح التطبيق طلب مجموعة متنوعة من
+                المنتجات من المتاجر المحلية والمطاعم والصيدليات وغيرها، ويقوم
+                فريق التطبيق بتوصيل الطلبات إلى المنزل أو المكتب في أسرع وقت
+                ممكن.
               </p>
               <router-link
                 :to="{ name: 'contact' }"
@@ -40,6 +39,9 @@
               >
               <!-- google app store -->
               <div class="my-5">
+                <p class="font_p_home" style="color: #1f1e1e">
+                  حمل التطبيق من جوجل بلاي أو آب ستور
+                </p>
                 <!-- Google Play button -->
                 <a class="market-btn google-btn" href="#" role="button">
                   <span class="market-button-subtitle">GET IT ON</span>
@@ -77,14 +79,14 @@
     >
       <div class="container">
         <!-- text image -->
-        <div class="text-center mb-5">
-          <h2 class="fw-bold bg-text">من نحن</h2>
-          <p class="fs-18">تعرف علي ما نقدمة بمزيد من التفاصيل التوضيحية</p>
+        <div class="text-center mb-4">
+          <h2 class="fw-bold bg-text fs-20">أينما كنت تصلك طلباتك</h2>
+          <!-- <p class="fs-18">تعرف علي ما نقدمة بمزيد من التفاصيل التوضيحية</p> -->
         </div>
         <div class="row d-flex justify-content-center">
           <div class="col-md-10">
             <div class="row align-items-center justify-content-between mb-2">
-              <div class="col-lg-6 text-center mt-sm-4">
+              <!-- <div class="col-lg-6 text-center mt-sm-4">
                 <img
                   class="img-fluid rounded-3"
                   src="../../../public/assets/rayah/about.webp"
@@ -92,19 +94,20 @@
                   height="317"
                   alt="img"
                 />
-              </div>
+              </div> -->
               <div
-                class="col-lg-5 fw-bold align-middle text-center text-lg-end"
+                class="col-lg-12 fw-bold align-middle text-center text-lg-end"
               >
-                <p class="pb-3 font_p_home fs-14" style="color: #1f1e1e">
-                  هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم
-                  توليد هذا النص من مولد النص العربى، حيث يمكنك أن تولد مثل هذا
-                  النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف
-                  التى يولدها التطبيق.إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح
-                  لك مولد النص العربى زيادة عدد الفقرات كما تريد، النص لن يبدو
-                  مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي
-                  المواقع على وجه
-                </p>
+                <h2
+                  class="pb-3 font_p_home text-center fs-20"
+                  style="color: #1f1e1e; line-height: 2rem"
+                >
+                  نحن نقدم خدمات توصيل الطلبات للمطاعم والمحلات التجارية
+                  والصيدليات والأفراد، يمكنك الاعتماد على تطبيق ريح لتوصيل
+                  طلباتك بأمان وسرعة، كل ما عليك فعله هو تحميل التطبيق وإنشاء
+                  حساب خاص بك، وبعد ذلك يمكنك تحديد مكان التسليم والطلب المطلوب،
+                  وسيتم توصيلها إلى عنوانك في أسرع وقت ممكن.
+                </h2>
               </div>
             </div>
           </div>
@@ -118,7 +121,7 @@
           <div class="col-md-10">
             <div class="row justify-content-center text-center">
               <div class="text-center mb-5">
-                <h2 class="fw-bold">شاشات التطبيق</h2>
+                <h2 class="fw-bold bg-text fs-20">شاشات التطبيق</h2>
                 <p class="fs-18">تعرف علي شاشات التطبيق لتتعرف علي ريح بوضوح</p>
               </div>
             </div>
@@ -144,8 +147,10 @@
           <div class="col-md-12">
             <div class="row justify-content-center text-center">
               <div class="text-center mb-5">
-                <h2 class="fw-bold">المدونة</h2>
-                <p class="fs-18">مجموعة مقالات مميزه عن ريح وما تقدمة</p>
+                <h2 class="fw-bold bg-text fs-20">المدونة</h2>
+                <p class="fs-18 fw-bold">
+                  تعرف أكثر على تطبيق ريح والمزايا التي يقدمها
+                </p>
               </div>
             </div>
             <div
@@ -210,73 +215,60 @@
 </template>
 
 <script>
-import SharedCom from "@/components/contact/SharedCom.vue";
-import PageLoader from "@/components/pageloader/PageLoder.vue";
+import { defineAsyncComponent } from "vue";
+
+const SharedCom = defineAsyncComponent(() =>
+  import("@/components/contact/SharedCom.vue")
+);
+// const PageLoader = defineAsyncComponent(() =>
+//   import("@/components/pageloader/PageLoder.vue")
+// );
+const NavBarCom = defineAsyncComponent(() =>
+  import("@/components/navbar/NavBar.vue")
+);
+const FooterCom = defineAsyncComponent(() =>
+  import("@/components/footer/FooterCom.vue")
+);
 import axios from "axios";
-import NavBarCom from "@/components/navbar/NavBar.vue";
-import FooterCom from "@/components/footer/FooterCom.vue";
 export default {
   name: "HomeCom",
   components: {
     NavBarCom,
     SharedCom,
     FooterCom,
-    PageLoader,
+    // PageLoader,
   },
   data() {
     return {
-      loading: false,
+      // loading: false,
       articles: [],
     };
   },
-  async mounted() {
-    this.loading = true;
-    /* articles */
-    // .catch(() => this.$router.push({ name: "servererror" }));
-    await axios
-      .get(`https://admin.rayyah.net/api/articles`)
-      .then((response) => {
-        this.articles = response.data.articles;
-      })
-      .catch(() => {
-        // console.log(err);
-        this.$router.push({ name: "servererror" });
-      });
-
-    this.loading = false;
+  mounted() {
+    // this.loading = true;
+    this.fetcharticles();
+    // this.loading = false;
   },
-  // methods: {
-  //   openWhatsApp() {
-  //     const url = `https://wa.me/+0201065743052`;
-  //     window.open(url, "_blank");
-  //   },
-  // },
+  methods: {
+    async fetcharticles() {
+      await axios
+        .get(`https://admin.rayyah.net/api/articles`)
+        .then((response) => {
+          this.articles = response.data.articles;
+        })
+        .catch(() => {
+          this.$router.push({ name: "servererror" });
+        });
+    },
+  },
 };
 </script>
 
 <style scoped>
-/* .whatsapp-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 9999;
-}
-
-.whatsapp-btn a {
-  display: block;
-  width: 60px;
-  height: 60px;
-  background-image: url("../../../public/assets/rayah/whatsapp.png");
-  background-size: cover;
-  text-indent: -9999px;
-} */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-input[type="number"] {
 }
 .home {
   direction: rtl;
@@ -371,16 +363,16 @@ input[type="number"] {
     font-size: 10px;
   }
 }
-div h2 {
+div .bg-text {
   position: relative;
   z-index: 1;
 }
-div h2::before {
+div .bg-text::before {
   border-top: 10px solid #ffd369;
   content: "";
   margin: 0 auto;
   position: absolute;
-  top: 22px;
+  top: 13px;
   left: 39px;
   right: 0;
   bottom: 0;

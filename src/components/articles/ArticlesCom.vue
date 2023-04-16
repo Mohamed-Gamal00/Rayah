@@ -95,8 +95,6 @@ export default {
   data() {
     return {
       loading: false,
-
-      // اخر الاخبار
       articles: [],
     };
   },
